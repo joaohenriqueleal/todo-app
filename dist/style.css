@@ -1,8 +1,7 @@
 @charset "UTF-8";
-@import "tailwindcss";
+@import 'tailwindcss';
 
-@import "../src/styles/animations/anim-from-left.css";
-
+@import '../src/styles/animations/anim-from-left.css';
 
 @theme {
     --color-brand: #00b5ff;

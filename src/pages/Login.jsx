@@ -1,52 +1,52 @@
-import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
-import MessageError from '../components/windows/MessageError'
-import Button from '../components/form/Button'
-import Input from '../components/form/Input'
-import Form from '../components/form/Form'
-import Title from '../components/ui/Title'
+import MessageError from '../components/windows/MessageError';
+import Button from '../components/form/Button';
+import Input from '../components/form/Input';
+import Form from '../components/form/Form';
+import Title from '../components/ui/Title';
 
-import { FaUser } from 'react-icons/fa6'
+import { FaUser } from 'react-icons/fa6';
 
-import saveActualUser from '../shared/actual-user/saveActualUser'
-import loadUsers from '../shared/users/loadUsers'
+import saveActualUser from '../shared/actual-user/saveActualUser';
+import loadUsers from '../shared/users/loadUsers';
 
-import LoginImg from '../assets/login-image.png'
+import LoginImg from '../assets/login-image.png';
 
 export default function Login({ setAuth }) {
-    const [showMessageUNF, setShowMessageUNF] = useState(false)
-    const [showMessageII, setShowMessageII] = useState(false)
-    const [showMessageIP, setShowMessageIP] = useState(false)
+    const [showMessageUNF, setShowMessageUNF] = useState(false);
+    const [showMessageII, setShowMessageII] = useState(false);
+    const [showMessageIP, setShowMessageIP] = useState(false);
 
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('')
-    const [users, setUsers] = useState([])
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        setUsers(loadUsers())
-    }, [])
+        setUsers(loadUsers());
+    }, []);
 
     const login = (e) => {
-        e.preventDefault()
+        e.preventDefault();
 
         if (!username || !password) {
-            setShowMessageII(true)
-            return
+            setShowMessageII(true);
+            return;
         }
 
-        const existsUser = users.find(u => u.username == username.trim())
+        const existsUser = users.find((u) => u.username == username.trim());
         if (existsUser) {
             if (existsUser.password == password) {
-                saveActualUser(username.trim())
-                setAuth(true)
-                return
+                saveActualUser(username.trim());
+                setAuth(true);
+                return;
             }
-            setShowMessageIP(true)
-            return
+            setShowMessageIP(true);
+            return;
         }
-        setShowMessageUNF(true)
-    }
+        setShowMessageUNF(true);
+    };
 
     return (
         <main className="flex h-screen w-screen bg-gray-50">
@@ -72,7 +72,7 @@ export default function Login({ setAuth }) {
                             <div
                                 className="bg-brand p-6 rounded-full shadow-xl text-white
                                     anim-from-left"
-                                >
+                            >
                                 <FaUser size={75} />
                             </div>
                         </div>
@@ -140,5 +140,5 @@ export default function Login({ setAuth }) {
                 />
             )}
         </main>
-    )
+    );
 }

@@ -1,6 +1,5 @@
-"use strict"
-
+'use strict';
 
 export default function loadActualUser() {
-    return sessionStorage.getItem('actual_user') || null
+    return sessionStorage.getItem('actual_user') || null;
 }

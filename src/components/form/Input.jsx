@@ -1,19 +1,27 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from 'react';
 
-
-export default function Input({ type, id, handleChange, placeholder,
-                                label, color, value, width, extraStyles,
-                                contentExtraStyles }) {
-    const [bgColor, setBgColor] = useState(color)
+export default function Input({
+    type,
+    id,
+    handleChange,
+    placeholder,
+    label,
+    color,
+    value,
+    width,
+    extraStyles,
+    contentExtraStyles,
+}) {
+    const [bgColor, setBgColor] = useState(color);
 
     useEffect(() => {
         if (!color) {
-            setBgColor('bg-white')
+            setBgColor('bg-white');
         }
-    }, [])
-    
+    }, []);
+
     return (
-        <div className={`flex flex-col gap-2 ${contentExtraStyles}`} >
+        <div className={`flex flex-col gap-2 ${contentExtraStyles}`}>
             <label
                 className="pl-2 text-gray-700 font-bold indent-1"
                 htmlFor={id}
@@ -30,5 +38,5 @@ export default function Input({ type, id, handleChange, placeholder,
                 id={id}
             />
         </div>
-    )
+    );
 }

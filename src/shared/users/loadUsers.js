@@ -1,8 +1,5 @@
-"use strict"
-
+'use strict';
 
 export default function loadUsers() {
-    return JSON.parse(
-        localStorage.getItem('your_tasken_users')
-    ) || []
+    return JSON.parse(localStorage.getItem('your_tasken_users')) || [];
 }

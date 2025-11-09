@@ -1,46 +1,45 @@
-import { useEffect, useState } from "react"
-import { X } from "lucide-react"
-
+import { useEffect, useState } from 'react';
+import { X } from 'lucide-react';
 
 export default function MessageError({ setShow, message }) {
-    const [closing, setClosing] = useState(false)
-    const [progress, setProgress] = useState(100)
-    const [visible, setVisible] = useState(false)
+    const [closing, setClosing] = useState(false);
+    const [progress, setProgress] = useState(100);
+    const [visible, setVisible] = useState(false);
 
     useEffect(() => {
-        const timer = setTimeout(() => setVisible(true), 50)
-        const duration = 5000
-        const intervalTime = 50
-        const decrement = (intervalTime / duration) * 100
+        const timer = setTimeout(() => setVisible(true), 50);
+        const duration = 5000;
+        const intervalTime = 50;
+        const decrement = (intervalTime / duration) * 100;
 
         const interval = setInterval(() => {
-            setProgress(p => {
+            setProgress((p) => {
                 if (p <= 0) {
-                    clearInterval(interval)
-                    handleClose()
-                    return 0
+                    clearInterval(interval);
+                    handleClose();
+                    return 0;
                 }
-                return p - decrement
-            })
-        }, intervalTime)
+                return p - decrement;
+            });
+        }, intervalTime);
 
         return () => {
-            clearTimeout(timer)
-            clearInterval(interval)
-        }
-    }, [])
+            clearTimeout(timer);
+            clearInterval(interval);
+        };
+    }, []);
 
     const handleClose = () => {
-        setClosing(true)
-        setTimeout(() => setShow(false), 300)
-    }
+        setClosing(true);
+        setTimeout(() => setShow(false), 300);
+    };
 
     return (
         <div
             className={`fixed top-4 right-4 z-50 transition-all duration-300 ${
                 visible && !closing
-                    ? "opacity-100 translate-x-0"
-                    : "opacity-0 translate-x-5"
+                    ? 'opacity-100 translate-x-0'
+                    : 'opacity-0 translate-x-5'
             }`}
         >
             <div
@@ -63,5 +62,5 @@ export default function MessageError({ setShow, message }) {
                 ></div>
             </div>
         </div>
-    )
+    );
 }
