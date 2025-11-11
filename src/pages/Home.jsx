@@ -1,3 +1,10 @@
+import NavBar from '../components/layout/NavBar'
+
+
 export default function Login() {
-    return <h1>Home</h1>;
+    return (
+        <>
+            <NavBar />
+        </>
+    )
 }
