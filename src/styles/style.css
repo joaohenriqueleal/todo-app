@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@import 'tailwindcss';
+
+@import './animations/anim-from-left.css';
+@import './animations/anim-spin.css';
+
+@import './ultilies/nav-link-mobile.css';
+
+@theme {
+    --color-brand: #00b5ff;
+}

@@ -75,7 +75,7 @@ export default function Evolution() {
                             space-y-6
                         "
                     >
-                        <div>
+                        <div className="anim-from-left">
                             <h1 className="text-xl font-semibold text-sky-900">
                                 Média geral de EXP por dia:
                             </h1>
@@ -85,7 +85,7 @@ export default function Evolution() {
                         </div>
 
                         <div className="h-px bg-sky-300/50 rounded-full" />
-                        <div>
+                        <div className="anim-from-left">
                             <h1 className="text-xl font-semibold text-sky-900">
                                 Melhor dia:
                             </h1>
@@ -93,7 +93,7 @@ export default function Evolution() {
                                 {getBestDay()} <span className="text-lg">🔥</span>
                             </p>
                         </div>
-                        <div>
+                        <div className="anim-from-left">
                             <h1 className="text-xl font-semibold text-sky-900">
                                 Pior dia:
                             </h1>
@@ -103,7 +103,7 @@ export default function Evolution() {
                         </div>
 
                         <div className="h-px bg-sky-300/50 rounded-full" />
-                        <div>
+                        <div className="anim-from-left">
                             <h1 className="text-xl font-semibold text-sky-900">
                                 Desempenho recente (últimos dias):
                             </h1>

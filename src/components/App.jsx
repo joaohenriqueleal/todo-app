@@ -9,8 +9,8 @@ import { useState } from 'react';
 import Configurations from '../pages/Configurations'
 import Evolution from '../pages/Evolution';
 import Register from '../pages/Register';
-import Projects from '../pages/Projects';
 import Login from '../pages/Login';
+import About from '../pages/About'
 import Home from '../pages/Home';
 
 export default function App() {
@@ -36,6 +36,16 @@ export default function App() {
                     }
                 />
                 <Route
+                    path="/sobre"
+                    element={
+                        authenticated ? (
+                            <About />
+                        ) : (
+                            <Navigate to="/" />
+                        )
+                    }
+                />
+                <Route
                     path="/registro"
                     element={
                         authenticated ? (
@@ -50,14 +60,6 @@ export default function App() {
                     element={
                         authenticated ? 
                             <Configurations setAuth={setAuthenticated} /> :
-                            <Navigate to="/login" />
-                    }
-                />
-                <Route
-                    path="/projetos"
-                    element={
-                        authenticated ? 
-                            <Projects /> :
                             <Navigate to="/login" />
                     }
                 />

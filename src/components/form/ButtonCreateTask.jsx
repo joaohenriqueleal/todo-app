@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 
 import loasActualUser from '../../shared/actual-user/loadActualUser'
-import loadTasks from '../../shared/tasks/loadTasks'
 import saveTasks from '../../shared/tasks/saveTasks'
 
 import WindowSingleInput from '../windows/WindowSingleInput'

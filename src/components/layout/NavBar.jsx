@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import { FaTasks, FaCog, FaFolder, FaChartBar } from 'react-icons/fa'
+import { FaTasks, FaCog, FaChartBar, FaInfo } from 'react-icons/fa'
 
 import ButtonCreateTask from '../form/ButtonCreateTask'
 import Legend from '../ui/Legend'
@@ -11,8 +11,8 @@ export default function NavBar({ tasks, setTasks }) {
 
     const isTarefas = path === '/' || path.endsWith('/todo-app') || path.endsWith('/todo-app/')
     const isConfig = path.includes('configuracoes')
-    const isProjects = path.includes('projetos')
     const isEvolution = path.includes('evolucao')
+    const isAbout = path.includes('sobre')
 
     return (
         <nav
@@ -40,11 +40,11 @@ export default function NavBar({ tasks, setTasks }) {
                 isTasksPage={isTarefas}
             />
             <Link
-                className={`nav-link-mobile ${isProjects ? 'text-gray-500' : ''}`}
-                to="/projetos"
+                className={`nav-link-mobile ${isAbout ? 'text-gray-500' : ''}`}
+                to="/sobre"
             >
-                <FaFolder size={32} />
-                <Legend extraStyles="text-sm font-bold" text="Projetos" />
+                <FaInfo size={32} />
+                <Legend extraStyles="text-sm font-bold" text="Sobre" />
             </Link>
             <Link
                 className={`nav-link-mobile ${isConfig ? 'text-gray-500' : ''}`}
