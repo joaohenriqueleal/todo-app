@@ -19,7 +19,7 @@ Com sistema de Login e Registro em LocalStorage e SeessionStorage, deleção e e
 - Layout responsivo, intuitivo e de fácil leitura.
 - Modularização de componentes React e Tailwind.
 
-<img src="https://github.com/joaohenriqueleal/todo-app/blob/main/docs/home-screenshot.png" />
+<img src="https://github.com/joaohenriqueleal/todo-app/blob/main/screenshots/home-screenshot.png" />
 
 ## Contatos
 
