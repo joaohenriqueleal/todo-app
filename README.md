@@ -23,5 +23,5 @@ Com sistema de Login e Registro em LocalStorage e SeessionStorage, deleção e e
 
 ## Contatos
 
-e-mail:  joaohenriquelealdesouza001@gmail.com  
-whatzapp: +55 (63) 98137-9878
+- e-mail: <a href="mailto:joaohenriquelealdesouza001@gmail.com" target="_blank">joaohenriquelealdesouza001@gmail.com</a>  
+- WhatsApp: <a href="https://wa.me/5563981379878" target="_blank">Leal, João</a>
